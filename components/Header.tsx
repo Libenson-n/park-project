@@ -1,6 +1,7 @@
 import Image from "next/image";
 import React from "react";
 import { Button } from "./ui/button";
+import Link from "next/link";
 
 const Header = () => {
   return (
@@ -10,7 +11,9 @@ const Header = () => {
         <Button className="bg-violet-600 hover:bg-violet-800">
           Create Post
         </Button>
-        <Button className="bg-violet-600 hover:bg-violet-800">Sign In</Button>
+        <Button asChild className="bg-violet-600 hover:bg-violet-800">
+          <Link href="/login">Sign In</Link>
+        </Button>
       </div>
     </div>
   );
